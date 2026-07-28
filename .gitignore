@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+#CLION/INTELLIJ
+.idea/
+
 # Compiled Object files
 *.slo
 *.lo
