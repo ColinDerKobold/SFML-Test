@@ -8,7 +8,8 @@ set(SFML_DIR "C:/Programme/SFML-3.1.0/lib/cmake/SFML")
 
 find_package(SFML 3 REQUIRED COMPONENTS Graphics Window System)
 
-add_executable(SFML_Test main.cpp)
+add_executable(SFML_Test main.cpp
+)
 
 target_link_libraries(SFML_Test PRIVATE
         SFML::Graphics
@@ -21,3 +22,5 @@ add_custom_command(TARGET SFML_Test POST_BUILD
         "C:/Programme/SFML-3.1.0/bin"
         $<TARGET_FILE_DIR:SFML_Test>
 )
+
+file(COPY Sprites DESTINATION ${CMAKE_BINARY_DIR})
